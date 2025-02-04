@@ -1,7 +1,15 @@
 import { Router } from "express";
-const router = Router();
-import { initializeDatabase, getTransactions, getStatistics, getBarChartData } from "../controllers/transactionController";
+import { 
+  initializeDatabase, 
+  getTransactions, 
+  getStatistics, 
+  getBarChartData 
+} from "../controllers/transactionController";
 
+
+const router = Router();
+
+// Routes
 router.get("/initialize", initializeDatabase);
 router.get("/transactions", getTransactions);
 router.get("/statistics", getStatistics);
